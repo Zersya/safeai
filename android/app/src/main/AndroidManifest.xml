@@ -17,6 +17,10 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+            <!-- http(s) intents are handled by the native bridge and the checker, never as in-app routes. -->
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="false"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

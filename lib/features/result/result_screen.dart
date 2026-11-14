@@ -311,7 +311,10 @@ class _Actions extends StatelessWidget {
         content: Text('result.confirmBody'.tr(), style: Theme.of(ctx).textTheme.bodyLarge),
         actions: [
           TextButton(
-            style: TextButton.styleFrom(minimumSize: const Size(0, 56)),
+            style: TextButton.styleFrom(
+              minimumSize: const Size(0, 56),
+              foregroundColor: Theme.of(ctx).colorScheme.primary,
+            ),
             onPressed: () => Navigator.pop(ctx, false),
             child: Text('result.confirmNo'.tr()),
           ),
