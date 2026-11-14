@@ -1,0 +1,140 @@
+{
+  "common": {
+    "accuracyNotice": "Checks cannot be guaranteed to be 100% accurate. Stay careful.",
+    "back": "Back",
+    "cancel": "Cancel",
+    "verdict": {
+      "safe": "Safe",
+      "suspicious": "Suspicious",
+      "dangerous": "Dangerous",
+      "unchecked": "Not checked"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "settings": "Settings"
+  },
+  "incoming": {
+    "noLink": "There is no link in this text"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "next": "Next",
+    "start": "Start",
+    "welcome": {
+      "title": "Welcome to blockAI",
+      "body": "blockAI checks links before they open, so you can avoid scams.",
+      "language": "Choose your language"
+    },
+    "how": {
+      "title": "How it works",
+      "step1": "Tap a link in WhatsApp or SMS",
+      "step2": "blockAI checks the link",
+      "step3": "Safe links open, dangerous links are blocked"
+    },
+    "protect": {
+      "title": "Turn on protection",
+      "body": "Make blockAI your main browser app, so every link you tap is checked first.",
+      "button": "Turn on protection",
+      "active": "Protection is on",
+      "failed": "Protection is not on yet. Choose blockAI as the default browser app in settings.",
+      "openSettings": "Open settings",
+      "google": "Links are checked with Google Safe Browsing. Only a small code from the link is sent, not the link itself."
+    }
+  },
+  "home": {
+    "protection": {
+      "activeTitle": "Protection is on",
+      "activeBody": "Links you tap will be checked first",
+      "inactiveTitle": "Protection is not on",
+      "inactiveBody": "Turn it on so links from WhatsApp and SMS are checked first",
+      "activate": "Turn on"
+    },
+    "hint": "Paste a link here",
+    "paste": "Paste",
+    "check": "Check",
+    "notALink": "This is not a web link"
+  },
+  "result": {
+    "checking": "Checking link…",
+    "goingTo": "Goes to: {url}",
+    "browserChooser": "browser chooser",
+    "openFailed": "No app available to open this link",
+    "openNow": "Open now",
+    "open": "Open",
+    "cancel": "Cancel",
+    "back": "Back",
+    "recheck": "Check again",
+    "retry": "Try again",
+    "dontOpen": "Don't open",
+    "openAnyway": "Open anyway",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "learnMore": "Learn more",
+    "confirmTitle": "Are you sure you want to open this suspicious link?",
+    "confirmBody": "Do not enter passwords, PINs, or bank details on this site.",
+    "confirmYes": "Yes, open",
+    "confirmNo": "Don't open",
+    "safe": {
+      "title": "No danger found",
+      "opening": "Opening in {browser} in {seconds}…"
+    },
+    "suspicious": {
+      "title": "Careful, this link looks suspicious",
+      "body": "Reasons:"
+    },
+    "dangerous": {
+      "title": "DANGER – do not open this link",
+      "socialEngineering": "This site is suspected of being deceptive. Attackers may try to steal your passwords, PIN, or bank details.",
+      "malware": "This site may contain code that could harm your phone.",
+      "unwantedSoftware": "This site may contain harmful programs.",
+      "harmfulApp": "This site may try to install harmful apps."
+    },
+    "unchecked": {
+      "title": "This link could not be checked",
+      "body": "We cannot confirm that this link is safe."
+    },
+    "google": {
+      "attribution": "Advisory provided by Google"
+    }
+  },
+  "reason": {
+    "ipHost": "The address is a number (an IP address), not a site name",
+    "idnHost": "The address uses characters that look like normal letters",
+    "apkDownload": "This link downloads an app (.apk)",
+    "brandLookalike": "The address imitates an official bank/service name",
+    "shortenerUnresolved": "A short link whose destination could not be seen",
+    "suspiciousTld": "The address ending is often used for scams",
+    "userinfoInUrl": "This address hides the real site",
+    "gsbSocialEngineering": "Google flags this site as deceptive",
+    "gsbMalware": "Google flags this site as containing harmful programs",
+    "gsbUnwantedSoftware": "Google flags this site as containing unwanted software",
+    "gsbHarmfulApp": "Google flags this site as installing harmful apps",
+    "noInternet": "No internet connection",
+    "serviceError": "The checking service is having problems",
+    "noApiKey": "The checking service is not configured"
+  },
+  "history": {
+    "title": "History",
+    "empty": "No links checked yet",
+    "clearAll": "Clear all",
+    "clearTitle": "Delete all history?",
+    "clearBody": "History is stored only on this phone and cannot be restored."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "browser": "Browser for opening links",
+    "browserAuto": "Automatic (Chrome)",
+    "protection": "Protection",
+    "protectionActive": "On: blockAI checks the links you tap",
+    "protectionInactive": "Not on yet",
+    "activate": "Turn on",
+    "defaultApps": "Open default apps settings",
+    "guide": "View the guide again",
+    "privacy": "Privacy policy",
+    "about": "About",
+    "version": "Version {version}"
+  }
+}

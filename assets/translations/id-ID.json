@@ -1,0 +1,140 @@
+{
+  "common": {
+    "accuracyNotice": "Pemeriksaan ini tidak bisa menjamin 100% benar. Tetap waspada.",
+    "back": "Kembali",
+    "cancel": "Batal",
+    "verdict": {
+      "safe": "Aman",
+      "suspicious": "Mencurigakan",
+      "dangerous": "Bahaya",
+      "unchecked": "Belum diperiksa"
+    }
+  },
+  "nav": {
+    "home": "Beranda",
+    "history": "Riwayat",
+    "settings": "Pengaturan"
+  },
+  "incoming": {
+    "noLink": "Tidak ada link di teks ini"
+  },
+  "onboarding": {
+    "skip": "Lewati",
+    "next": "Lanjut",
+    "start": "Mulai",
+    "welcome": {
+      "title": "Selamat datang di blockAI",
+      "body": "blockAI memeriksa link sebelum dibuka, supaya Anda terhindar dari penipuan.",
+      "language": "Pilih bahasa"
+    },
+    "how": {
+      "title": "Cara kerja",
+      "step1": "Ketuk link di WhatsApp atau SMS",
+      "step2": "blockAI memeriksa link tersebut",
+      "step3": "Link aman dibuka, link berbahaya diblokir"
+    },
+    "protect": {
+      "title": "Aktifkan perlindungan",
+      "body": "Jadikan blockAI aplikasi browser utama, agar setiap link yang Anda ketuk diperiksa lebih dulu.",
+      "button": "Aktifkan perlindungan",
+      "active": "Perlindungan aktif",
+      "failed": "Perlindungan belum aktif. Pilih blockAI sebagai aplikasi browser bawaan di pengaturan.",
+      "openSettings": "Buka pengaturan",
+      "google": "Link diperiksa dengan Google Safe Browsing. Hanya potongan kode kecil dari link yang dikirim, bukan link-nya."
+    }
+  },
+  "home": {
+    "protection": {
+      "activeTitle": "Perlindungan aktif",
+      "activeBody": "Link yang Anda ketuk akan diperiksa dulu",
+      "inactiveTitle": "Perlindungan belum aktif",
+      "inactiveBody": "Aktifkan agar link dari WhatsApp dan SMS diperiksa dulu",
+      "activate": "Aktifkan"
+    },
+    "hint": "Tempel link di sini",
+    "paste": "Tempel",
+    "check": "Periksa",
+    "notALink": "Ini bukan link internet"
+  },
+  "result": {
+    "checking": "Memeriksa link…",
+    "goingTo": "Menuju ke: {url}",
+    "browserChooser": "pilihan browser",
+    "openFailed": "Tidak ada aplikasi untuk membuka link ini",
+    "openNow": "Buka sekarang",
+    "open": "Buka",
+    "cancel": "Batal",
+    "back": "Kembali",
+    "recheck": "Periksa lagi",
+    "retry": "Coba lagi",
+    "dontOpen": "Jangan buka",
+    "openAnyway": "Tetap buka",
+    "copyLink": "Salin link",
+    "copied": "Link disalin",
+    "learnMore": "Pelajari lebih lanjut",
+    "confirmTitle": "Yakin ingin membuka link yang mencurigakan?",
+    "confirmBody": "Jangan masukkan kata sandi, PIN, atau data bank di situs ini.",
+    "confirmYes": "Ya, buka",
+    "confirmNo": "Jangan buka",
+    "safe": {
+      "title": "Tidak ditemukan bahaya",
+      "opening": "Membuka di {browser} dalam {seconds}…"
+    },
+    "suspicious": {
+      "title": "Hati-hati, link ini mencurigakan",
+      "body": "Alasan:"
+    },
+    "dangerous": {
+      "title": "BAHAYA – jangan buka link ini",
+      "socialEngineering": "Situs ini diduga penipuan. Penipu mungkin mencoba mencuri kata sandi, PIN, atau data bank Anda.",
+      "malware": "Situs ini mungkin berisi program yang dapat merusak HP Anda.",
+      "unwantedSoftware": "Situs ini mungkin berisi program berbahaya.",
+      "harmfulApp": "Situs ini mungkin mencoba memasang aplikasi berbahaya."
+    },
+    "unchecked": {
+      "title": "Link belum bisa diperiksa",
+      "body": "Kami tidak bisa memastikan link ini aman."
+    },
+    "google": {
+      "attribution": "Advisory provided by Google"
+    }
+  },
+  "reason": {
+    "ipHost": "Alamatnya berupa angka (alamat IP), bukan nama situs",
+    "idnHost": "Alamatnya memakai karakter yang menyerupai huruf biasa",
+    "apkDownload": "Link ini mengunduh aplikasi (.apk)",
+    "brandLookalike": "Alamatnya meniru nama bank/layanan resmi",
+    "shortenerUnresolved": "Link pendek yang tujuannya tidak bisa dilihat",
+    "suspiciousTld": "Akhiran alamatnya sering dipakai untuk penipuan",
+    "userinfoInUrl": "Alamat ini menyembunyikan situs aslinya",
+    "gsbSocialEngineering": "Google menandai situs ini sebagai penipuan",
+    "gsbMalware": "Google menandai situs ini berisi program berbahaya",
+    "gsbUnwantedSoftware": "Google menandai situs ini berisi program yang tidak diinginkan",
+    "gsbHarmfulApp": "Google menandai situs ini memasang aplikasi berbahaya",
+    "noInternet": "Tidak ada koneksi internet",
+    "serviceError": "Layanan pemeriksa sedang bermasalah",
+    "noApiKey": "Layanan pemeriksa belum dikonfigurasi"
+  },
+  "history": {
+    "title": "Riwayat",
+    "empty": "Belum ada link yang diperiksa",
+    "clearAll": "Hapus semua",
+    "clearTitle": "Hapus semua riwayat?",
+    "clearBody": "Riwayat hanya tersimpan di HP ini dan tidak bisa dikembalikan."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "language": "Bahasa",
+    "browser": "Browser untuk membuka link",
+    "browserAuto": "Otomatis (Chrome)",
+    "protection": "Perlindungan",
+    "protectionActive": "Aktif: blockAI memeriksa link yang Anda ketuk",
+    "protectionInactive": "Belum aktif",
+    "activate": "Aktifkan",
+    "defaultApps": "Buka pengaturan aplikasi bawaan",
+    "guide": "Lihat panduan lagi",
+    "privacy": "Kebijakan privasi",
+    "about": "Tentang",
+    "version": "Versi {version}"
+  }
+}
