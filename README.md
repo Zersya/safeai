@@ -1,17 +1,19 @@
-# safeai
+# safeAI
 
-A new Flutter project.
+Android app (Flutter) that checks links before they open. Registers as a browser, checks every link with Google Safe Browsing v5 plus on-device rules, then opens safe links in the real browser.
 
-## Getting Started
+## Build
 
-This project is a starting point for a Flutter application.
+```
+flutter pub get
+cp secrets.example.json secrets.json   # put the Safe Browsing API key in it (git-ignored)
+flutter test
+flutter build appbundle --release --dart-define-from-file=secrets.json
+```
 
-A few resources to get you started if this is your first Flutter project:
+Release signing reads `android/key.properties` (git-ignored; keystore lives outside the repo). Without it the release build falls back to the debug key.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Application id: `id.safeai.app`
+- Privacy policy: `docs/privacy/index.html` (GitHub Pages: https://zersya.github.io/safeai/privacy/)
+- Store assets and listing text: `store/`
+- Note: `hashes:search` v5 only answers in protobuf; decoded in `lib/checking/safe_browsing_proto.dart`.
