@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import 'settings_cubit.dart';
 
-const privacyPolicyUrl = 'https://zersya.github.io/blockai/privacy/';
+const privacyPolicyUrl = 'https://zersya.github.io/safeai/privacy/';
 
 const _idLocale = Locale('id', 'ID');
 const _enLocale = Locale('en', 'US');

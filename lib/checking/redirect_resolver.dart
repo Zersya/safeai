@@ -15,7 +15,7 @@ class HttpRedirectResolver implements RedirectResolver {
 
   static const _maxHops = 5;
   static const _timeout = Duration(seconds: 5);
-  static const _userAgent = 'Mozilla/5.0 (Linux; Android 14) blockAI/1.0';
+  static const _userAgent = 'Mozilla/5.0 (Linux; Android 14) safeAI/1.0';
 
   @override
   Future<List<Uri>?> resolveChain(Uri start) async {

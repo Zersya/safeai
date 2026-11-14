@@ -6,14 +6,6 @@ enum ThreatType {
   unwantedSoftware,
   harmfulApp;
 
-  static ThreatType? fromApi(String? value) => switch (value) {
-        'SOCIAL_ENGINEERING' => ThreatType.socialEngineering,
-        'MALWARE' => ThreatType.malware,
-        'UNWANTED_SOFTWARE' => ThreatType.unwantedSoftware,
-        'POTENTIALLY_HARMFUL_APPLICATION' => ThreatType.harmfulApp,
-        _ => null,
-      };
-
   ReasonCode get reason => switch (this) {
         ThreatType.socialEngineering => ReasonCode.gsbSocialEngineering,
         ThreatType.malware => ReasonCode.gsbMalware,

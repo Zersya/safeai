@@ -84,7 +84,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
           BlocProvider(create: (_) => HistoryCubit(widget.history)),
         ],
         child: MaterialApp.router(
-          title: 'blockAI',
+          title: 'safeAI',
           debugShowCheckedModeBanner: false,
           theme: buildTheme(),
           scaffoldMessengerKey: _messengerKey,

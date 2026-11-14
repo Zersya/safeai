@@ -47,7 +47,7 @@ app.*.map.json
 # Widget Preview related
 .widget_preview/
 
-# blockAI secrets
+# safeAI secrets
 secrets.json
 android/key.properties
 *.jks

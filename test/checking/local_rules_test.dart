@@ -1,5 +1,5 @@
-import 'package:blockai/checking/local_rules.dart';
-import 'package:blockai/checking/models.dart';
+import 'package:safeai/checking/local_rules.dart';
+import 'package:safeai/checking/models.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Set<ReasonCode> rules(String url, {bool resolved = false}) =>

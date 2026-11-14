@@ -16,7 +16,7 @@ class HistoryRepository implements ResultStore {
   static const _maxRows = 500;
 
   static Future<HistoryRepository> open() async {
-    final path = p.join(await getDatabasesPath(), 'blockai.db');
+    final path = p.join(await getDatabasesPath(), 'safeai.db');
     final db = await openDatabase(
       path,
       version: 1,

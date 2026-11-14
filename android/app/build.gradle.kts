@@ -14,7 +14,7 @@ if (keyPropertiesFile.exists()) {
 }
 
 android {
-    namespace = "id.blockai.app"
+    namespace = "id.safeai.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "id.blockai.app"
+        applicationId = "id.safeai.app"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

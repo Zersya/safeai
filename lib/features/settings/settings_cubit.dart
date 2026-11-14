@@ -4,7 +4,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import '../../core/native_bridge.dart';
 import '../../data/settings_repository.dart';
 
-/// Whether blockAI is the default browser. `null` until first read.
+/// Whether safeAI is the default browser. `null` until first read.
 class ProtectionCubit extends Cubit<bool?> {
   ProtectionCubit(this._bridge) : super(null) {
     refresh();

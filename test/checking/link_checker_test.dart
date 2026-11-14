@@ -1,7 +1,7 @@
-import 'package:blockai/checking/link_checker.dart';
-import 'package:blockai/checking/models.dart';
-import 'package:blockai/checking/redirect_resolver.dart';
-import 'package:blockai/checking/safe_browsing_client.dart';
+import 'package:safeai/checking/link_checker.dart';
+import 'package:safeai/checking/models.dart';
+import 'package:safeai/checking/redirect_resolver.dart';
+import 'package:safeai/checking/safe_browsing_client.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class FakeThreats implements ThreatSource {

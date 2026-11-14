@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Image.asset('assets/icon/icon.png', width: 36, height: 36),
             const SizedBox(width: 12),
-            const Text('blockAI'),
+            const Text('safeAI'),
           ],
         ),
       ),

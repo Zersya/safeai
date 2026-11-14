@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 import 'models.dart';
+import 'safe_browsing_proto.dart';
 import 'url_expressions.dart';
 
 sealed class GsbResult {
@@ -30,12 +31,6 @@ abstract class ThreatSource {
   Future<GsbResult> check(List<String> asciiUrls);
 }
 
-class FullHashEntry {
-  const FullHashEntry(this.hash, this.threats);
-  final List<int> hash;
-  final Set<ThreatType> threats;
-}
-
 typedef _CacheSlot = ({DateTime expiry, List<FullHashEntry> entries});
 
 const _minCleanCache = Duration(minutes: 5);
@@ -44,6 +39,7 @@ const _maxPrefixesPerRequest = 30;
 const _requestTimeout = Duration(seconds: 8);
 
 /// Google Safe Browsing v5 `hashes:search`, "No Storage Real Time Mode".
+/// The endpoint only answers in protobuf (`alt=json` is rejected).
 /// Only 4-byte hash prefixes ever leave the device.
 class SafeBrowsingClient implements ThreatSource {
   SafeBrowsingClient(this._client, this._apiKey, {DateTime Function()? clock})
@@ -98,13 +94,11 @@ class SafeBrowsingClient implements ThreatSource {
       scheme: 'https',
       host: 'safebrowsing.googleapis.com',
       path: '/v5/hashes:search',
-      queryParameters: {'key': _apiKey, 'alt': 'json', 'hashPrefixes': chunk},
+      queryParameters: {'key': _apiKey, 'hashPrefixes': chunk},
     );
     final http.Response response;
     try {
-      response = await _client
-          .get(uri, headers: {'Accept': 'application/json'})
-          .timeout(_requestTimeout);
+      response = await _client.get(uri).timeout(_requestTimeout);
     } on TimeoutException {
       return const GsbFailed(ReasonCode.noInternet);
     } on IOException {
@@ -114,18 +108,14 @@ class SafeBrowsingClient implements ThreatSource {
     }
     if (response.statusCode != 200) return const GsbFailed(ReasonCode.serviceError);
 
-    final List<FullHashEntry> entries;
-    Duration cacheDuration;
+    final SearchHashesResponse parsed;
     try {
-      final body = jsonDecode(utf8.decode(response.bodyBytes));
-      if (body is! Map<String, dynamic>) throw const FormatException('not an object');
-      entries = _parseEntries(body['fullHashes']);
-      cacheDuration = _parseDuration(body['cacheDuration']);
+      parsed = parseSearchHashesResponse(response.bodyBytes);
     } on FormatException {
       return const GsbFailed(ReasonCode.serviceError);
-    } on TypeError {
-      return const GsbFailed(ReasonCode.serviceError);
     }
+    final entries = parsed.entries;
+    final cacheDuration = parsed.cacheDuration;
 
     final now = _now();
     for (final prefix in chunk) {
@@ -140,40 +130,6 @@ class SafeBrowsingClient implements ThreatSource {
       _cache[prefix] = (expiry: now.add(ttl), entries: matching);
     }
     return null;
-  }
-
-  static List<FullHashEntry> _parseEntries(Object? raw) {
-    if (raw == null) return const [];
-    final out = <FullHashEntry>[];
-    for (final item in raw as List) {
-      final map = item as Map<String, dynamic>;
-      final hash = _decodeBase64(map['fullHash'] as String);
-      final threats = <ThreatType>{};
-      for (final d in (map['fullHashDetails'] as List? ?? const [])) {
-        final detail = d as Map<String, dynamic>;
-        final attrs = detail['attributes'] as List?;
-        if (attrs != null && attrs.isNotEmpty) continue; // CANARY / FRAME_ONLY
-        final t = ThreatType.fromApi(detail['threatType'] as String?);
-        if (t != null) threats.add(t);
-      }
-      out.add(FullHashEntry(hash, threats));
-    }
-    return out;
-  }
-
-  static List<int> _decodeBase64(String s) {
-    var v = s.replaceAll('-', '+').replaceAll('_', '/');
-    while (v.length % 4 != 0) {
-      v += '=';
-    }
-    return base64.decode(v);
-  }
-
-  static Duration _parseDuration(Object? raw) {
-    if (raw is! String || !raw.endsWith('s')) return Duration.zero;
-    final seconds = double.tryParse(raw.substring(0, raw.length - 1));
-    if (seconds == null || seconds < 0) return Duration.zero;
-    return Duration(milliseconds: (seconds * 1000).round());
   }
 
   static bool _startsWith(List<int> a, List<int> prefix) {

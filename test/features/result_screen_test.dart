@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:blockai/checking/link_checker.dart';
-import 'package:blockai/checking/models.dart';
-import 'package:blockai/checking/redirect_resolver.dart';
-import 'package:blockai/checking/safe_browsing_client.dart';
-import 'package:blockai/core/native_bridge.dart';
-import 'package:blockai/data/settings_repository.dart';
-import 'package:blockai/features/result/result_cubit.dart';
-import 'package:blockai/features/result/result_screen.dart';
+import 'package:safeai/checking/link_checker.dart';
+import 'package:safeai/checking/models.dart';
+import 'package:safeai/checking/redirect_resolver.dart';
+import 'package:safeai/checking/safe_browsing_client.dart';
+import 'package:safeai/core/native_bridge.dart';
+import 'package:safeai/data/settings_repository.dart';
+import 'package:safeai/features/result/result_cubit.dart';
+import 'package:safeai/features/result/result_screen.dart';
 // ignore: implementation_imports
 import 'package:easy_localization/src/localization.dart';
 // ignore: implementation_imports
@@ -42,7 +42,7 @@ class _Store implements ResultStore {
   Future<CheckResult> insert(CheckResult r) async => r.withId(1);
 }
 
-const _channel = MethodChannel('id.blockai.app/native');
+const _channel = MethodChannel('id.safeai.app/native');
 
 /// Pumps the result screen for [url] with a fixed Safe Browsing outcome and
 /// returns the URLs handed to the native `openUrl`.

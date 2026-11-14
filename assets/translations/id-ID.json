@@ -23,22 +23,22 @@
     "next": "Lanjut",
     "start": "Mulai",
     "welcome": {
-      "title": "Selamat datang di blockAI",
-      "body": "blockAI memeriksa link sebelum dibuka, supaya Anda terhindar dari penipuan.",
+      "title": "Selamat datang di safeAI",
+      "body": "safeAI memeriksa link sebelum dibuka, supaya Anda terhindar dari penipuan.",
       "language": "Pilih bahasa"
     },
     "how": {
       "title": "Cara kerja",
       "step1": "Ketuk link di WhatsApp atau SMS",
-      "step2": "blockAI memeriksa link tersebut",
+      "step2": "safeAI memeriksa link tersebut",
       "step3": "Link aman dibuka, link berbahaya diblokir"
     },
     "protect": {
       "title": "Aktifkan perlindungan",
-      "body": "Jadikan blockAI aplikasi browser utama, agar setiap link yang Anda ketuk diperiksa lebih dulu.",
+      "body": "Jadikan safeAI aplikasi browser utama, agar setiap link yang Anda ketuk diperiksa lebih dulu.",
       "button": "Aktifkan perlindungan",
       "active": "Perlindungan aktif",
-      "failed": "Perlindungan belum aktif. Pilih blockAI sebagai aplikasi browser bawaan di pengaturan.",
+      "failed": "Perlindungan belum aktif. Pilih safeAI sebagai aplikasi browser bawaan di pengaturan.",
       "openSettings": "Buka pengaturan",
       "google": "Link diperiksa dengan Google Safe Browsing. Hanya potongan kode kecil dari link yang dikirim, bukan link-nya."
     }
@@ -128,7 +128,7 @@
     "browser": "Browser untuk membuka link",
     "browserAuto": "Otomatis (Chrome)",
     "protection": "Perlindungan",
-    "protectionActive": "Aktif: blockAI memeriksa link yang Anda ketuk",
+    "protectionActive": "Aktif: safeAI memeriksa link yang Anda ketuk",
     "protectionInactive": "Belum aktif",
     "activate": "Aktifkan",
     "defaultApps": "Buka pengaturan aplikasi bawaan",

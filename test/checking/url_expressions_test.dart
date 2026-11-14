@@ -1,4 +1,4 @@
-import 'package:blockai/checking/url_expressions.dart';
+import 'package:safeai/checking/url_expressions.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

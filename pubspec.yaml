@@ -1,5 +1,5 @@
-name: blockai
-description: "blockAI: checks links before they open."
+name: safeai
+description: "safeAI: checks links before they open."
 publish_to: 'none'
 
 version: 1.0.0+1

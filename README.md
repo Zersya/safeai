@@ -1,4 +1,4 @@
-# blockai
+# safeai
 
 A new Flutter project.
 

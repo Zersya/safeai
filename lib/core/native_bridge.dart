@@ -10,9 +10,9 @@ class BrowserInfo {
   final String label;
 }
 
-/// Typed wrapper over the `id.blockai.app/native` MethodChannel.
+/// Typed wrapper over the `id.safeai.app/native` MethodChannel.
 ///
-/// All intents go through here (never `url_launcher`): once blockAI is the
+/// All intents go through here (never `url_launcher`): once safeAI is the
 /// default browser, a generic launcher would loop back into this app.
 class NativeBridge implements HostConverter {
   NativeBridge() {
@@ -24,7 +24,7 @@ class NativeBridge implements HostConverter {
     });
   }
 
-  static const _channel = MethodChannel('id.blockai.app/native');
+  static const _channel = MethodChannel('id.safeai.app/native');
   final _newLinks = StreamController<String>.broadcast();
 
   /// Tagged text (`link:<url>` / `share:<text>`) delivered while running.

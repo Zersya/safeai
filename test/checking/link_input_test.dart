@@ -1,4 +1,4 @@
-import 'package:blockai/checking/link_input.dart';
+import 'package:safeai/checking/link_input.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

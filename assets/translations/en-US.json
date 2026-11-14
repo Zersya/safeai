@@ -23,22 +23,22 @@
     "next": "Next",
     "start": "Start",
     "welcome": {
-      "title": "Welcome to blockAI",
-      "body": "blockAI checks links before they open, so you can avoid scams.",
+      "title": "Welcome to safeAI",
+      "body": "safeAI checks links before they open, so you can avoid scams.",
       "language": "Choose your language"
     },
     "how": {
       "title": "How it works",
       "step1": "Tap a link in WhatsApp or SMS",
-      "step2": "blockAI checks the link",
+      "step2": "safeAI checks the link",
       "step3": "Safe links open, dangerous links are blocked"
     },
     "protect": {
       "title": "Turn on protection",
-      "body": "Make blockAI your main browser app, so every link you tap is checked first.",
+      "body": "Make safeAI your main browser app, so every link you tap is checked first.",
       "button": "Turn on protection",
       "active": "Protection is on",
-      "failed": "Protection is not on yet. Choose blockAI as the default browser app in settings.",
+      "failed": "Protection is not on yet. Choose safeAI as the default browser app in settings.",
       "openSettings": "Open settings",
       "google": "Links are checked with Google Safe Browsing. Only a small code from the link is sent, not the link itself."
     }
@@ -128,7 +128,7 @@
     "browser": "Browser for opening links",
     "browserAuto": "Automatic (Chrome)",
     "protection": "Protection",
-    "protectionActive": "On: blockAI checks the links you tap",
+    "protectionActive": "On: safeAI checks the links you tap",
     "protectionInactive": "Not on yet",
     "activate": "Turn on",
     "defaultApps": "Open default apps settings",

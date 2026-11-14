@@ -1,4 +1,4 @@
-package id.blockai.app
+package id.safeai.app
 
 import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
@@ -15,7 +15,7 @@ import io.flutter.plugin.common.MethodChannel
 import java.net.IDN
 
 class MainActivity : FlutterActivity() {
-    private val channelName = "id.blockai.app/native"
+    private val channelName = "id.safeai.app/native"
     private val roleRequestCode = 4242
     private val probeUri: Uri = Uri.parse("https://www.google.com")
 
